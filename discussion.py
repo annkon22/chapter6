@@ -58,7 +58,7 @@ def build_parse_tree(fp_exp):
             current_tree.set_root_val(int(i))
             parent = p_stack.pop()
             current_tree = parent
-        elif i in ['+', '-', '*', '/', ')']:
+        elif i in ['+', '-', '*', '/']:
             current_tree.set_root_val(i)
             current_tree.insert_right('')
             p_stack.add(current_tree)
